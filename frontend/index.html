@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIVARIUM ZERO - Artificial Life Simulation</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 VIVARIUM ZERO</h1>
+            <p class="subtitle">Artificial Life Through Genetic Programming</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Canvas container -->
+            <div id="canvas-container"></div>
+
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <h3>⚙️ God Mode Controls</h3>
+                
+                <div class="control-group">
+                    <h4>Simulation</h4>
+                    <div class="button-row">
+                        <button id="btn-pause" class="btn btn-warning">⏸ Pause</button>
+                        <button id="btn-resume" class="btn btn-success">▶️ Resume</button>
+                        <button id="btn-step" class="btn btn-info">⏭ Step</button>
+                        <button id="btn-reset" class="btn btn-danger">🔄 Reset</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h4>Statistics</h4>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Tick:</span>
+                            <span id="stat-tick" class="stat-value">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Generation:</span>
+                            <span id="stat-generation" class="stat-value">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Population:</span>
+                            <span id="stat-population" class="stat-value">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Food:</span>
+                            <span id="stat-food" class="stat-value">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Avg Energy:</span>
+                            <span id="stat-energy" class="stat-value">0.0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Status:</span>
+                            <span id="stat-status" class="stat-value status-running">Running</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h4>Connection</h4>
+                    <div class="connection-status">
+                        <span id="ws-status" class="status-dot status-disconnected"></span>
+                        <span id="ws-text">Disconnected</span>
+                    </div>
+                </div>
+
+                <div class="control-group legend">
+                    <h4>Legend</h4>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: rgb(50, 255, 50);"></div>
+                        <span>Food</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: rgb(255, 100, 100);"></div>
+                        <span>Creature (High Energy)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: rgb(150, 75, 0);"></div>
+                        <span>Corpse</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Phase 1: Genesis • Simple random walk behavior • No genetic programming yet</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/websocket.js"></script>
+    <script src="/static/js/visualizer.js"></script>
+    <script src="/static/js/dashboard.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

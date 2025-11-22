@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vivarium_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/app:/app/app
+      - ./data:/app/data
+      - ./frontend:/app/frontend
+    environment:
+      - WORLD_WIDTH=800
+      - WORLD_HEIGHT=600
+      - INITIAL_POPULATION=20
+      - MAX_POPULATION=500
+      - PHOTOSYNTHESIS_RATE=0.5
+      - EXISTENCE_TAX=0.2
+      - FOOD_ENERGY=20
+      - FOOD_SPAWN_INTERVAL=2.0
+      - FOOD_SPAWN_COUNT=3
+      - MUTATION_RATE=0.01
+      - REPRODUCTION_ENERGY=80
+      - TARGET_FPS=60
+      - MAX_GAS_PER_TICK=50
+      - SNAPSHOT_INTERVAL=300
+      - DATABASE_PATH=/app/data/vivarium.db
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DEBUG=true
+    restart: unless-stopped
+    networks:
+      - vivarium_network
+
+networks:
+  vivarium_network:
+    driver: bridge
