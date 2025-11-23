@@ -54,12 +54,6 @@ Secondary language: Chinese translations stored under `docs/zh/` and explicitly 
 Private/internal drafts should go in `private/` (git-ignored).  
 Sanitized public product specification: `docs/PRODUCT_SPEC.md` (Chinese version: `docs/zh/PRODUCT_SPEC_ZH.md`).
 
-## 🔒 Privacy & Sanitization
-Personal identifiers and home-lab specifics have been removed from public materials. Hardware is described generically as an edge server environment. If prior commits contain sensitive info, consider interactive history rewrite:
-```
-git filter-repo --replace-text replacements.txt
-```
-or a full rebase strategy. (History rewrite affects forks; coordinate before execution.)
 
 ## 🤖 For Agents
 - Agent guide: `AGENTS.md` (Chinese: `docs/zh/AGENTS_ZH.md`)
@@ -73,14 +67,14 @@ or a full rebase strategy. (History rewrite affects forks; coordinate before exe
 ### Prerequisites
 
 - **Docker** and **Docker Compose** installed
-- **Mac mini (ARM64)** or any ARM64/x86_64 Linux system
+- ARM64** or x86_64 Linux system
 - At least **2GB RAM** and **1GB disk space**
 
 ### Installation
 
 1. **Clone the repository:**
    ```bash
-   cd /home/home/VIVARIUM_ZERO
+   cd VIVARIUM_ZERO
    ```
 
 2. **Create environment file:**
@@ -381,13 +375,6 @@ MIT License - Free for research and educational use
 - Built with **FastAPI**, **p5.js**, **Numba**
 - Designed for **Mac mini Home Lab** enthusiasts
 
----
-
-## 📞 Contact
-
-**Project Owner**: Ryan (Founder)  
-**CTO**: AI Assistant  
-**Target Platform**: Mac mini (ARM64/Ubuntu) + Web Client
 
 ---
 
