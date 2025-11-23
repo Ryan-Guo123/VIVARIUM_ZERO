@@ -4,6 +4,16 @@
 
 An evolutionary artificial life system where creatures don't just evolve parameters - they evolve **code logic** itself. Running 24/7 on a Mac mini Home Lab, organisms self-modify their behavioral instructions in a virtual assembly environment, emerging survival strategies never conceived by humans.
 
+<div align="center">
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![CI](https://github.com/Ryan-Guo123/VIVARIUM_ZERO/actions/workflows/ci.yml/badge.svg)](https://github.com/Ryan-Guo123/VIVARIUM_ZERO/actions/workflows/ci.yml)
+[![Issues](https://img.shields.io/github/issues/Ryan-Guo123/VIVARIUM_ZERO)](https://github.com/Ryan-Guo123/VIVARIUM_ZERO/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/Ryan-Guo123/VIVARIUM_ZERO)](https://github.com/Ryan-Guo123/VIVARIUM_ZERO/pulls)
+[![Stars](https://img.shields.io/github/stars/Ryan-Guo123/VIVARIUM_ZERO?style=social)](https://github.com/Ryan-Guo123/VIVARIUM_ZERO)
+
+</div>
+
 ---
 
 ## 🎯 Project Vision
@@ -13,6 +23,48 @@ VIVARIUM ZERO is a **Genetic Programming** based artificial life simulator where
 - ⚡ A virtual machine (VM) executes genetic "assembly code" for each organism
 - 🔄 Users have "God Mode" with time travel capabilities - rewind evolution at any moment
 - 🏠 Designed for 24/7 operation on **Mac mini (ARM64) + Ubuntu Server**
+
+### Why Open Source?
+We believe emergent digital ecosystems should be collectively explored. This repository is open so that:
+- Researchers can prototype evolutionary hypotheses
+- Students can learn about artificial life and genetic programming
+- Contributors can extend VM instruction sets & ecological dynamics
+- The community can watch unpredictable evolution in real-time
+
+### High-Level Architecture
+```
+[ VM Genome ] -> [ VM Interpreter ] -> [ Action Intents ] -> [ Physics/World ] -> [ Visualization ]
+      ↑                |                     |                      |                |
+   Mutation Engine   Gas Limiter         Energy Economy          Snapshot System   WebSocket Stream
+```
+
+### Roadmap Tags
+| Tag | Meaning |
+|-----|---------|
+| `phase1` | Genesis MVP |
+| `vm` | Virtual machine evolution features |
+| `persistence` | Time machine & snapshots |
+| `visual` | Frontend rendering & UI |
+| `perf` | Performance & optimization |
+| `research` | Experimental algorithms |
+
+## 📘 Language Policy
+Primary language: English (default for all public docs, code comments, issues, PRs).  
+Secondary language: Chinese translations stored under `docs/zh/` and explicitly marked as such.  
+Private/internal drafts should go in `private/` (git-ignored).  
+Sanitized public product specification: `docs/PRODUCT_SPEC.md` (Chinese version: `docs/zh/PRODUCT_SPEC_ZH.md`).
+
+## 🔒 Privacy & Sanitization
+Personal identifiers and home-lab specifics have been removed from public materials. Hardware is described generically as an edge server environment. If prior commits contain sensitive info, consider interactive history rewrite:
+```
+git filter-repo --replace-text replacements.txt
+```
+or a full rebase strategy. (History rewrite affects forks; coordinate before execution.)
+
+## 🤖 For Agents
+- Agent guide: `AGENTS.md` (Chinese: `docs/zh/AGENTS_ZH.md`)
+- Follow minimal-diff patches, run tests, and update docs when behavior changes.
+
 
 ---
 

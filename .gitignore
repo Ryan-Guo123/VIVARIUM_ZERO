@@ -56,3 +56,6 @@ Thumbs.db
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Private drafts (not for public repo)
+private/

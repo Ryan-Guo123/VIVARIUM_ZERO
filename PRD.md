@@ -1,4 +1,4 @@
-# Project: VIVARIUM ZERO - Product Requirements Document (PRD)
+roject: VIVARIUM ZERO - Product Requirements Document (PRD)
 **Version:** 1.0
 **Owner:** Ryan (Founder)
 **Role:** CTO (AI)
